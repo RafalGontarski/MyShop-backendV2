@@ -84,4 +84,15 @@ public class EmailService {
         userRepository.save(user);
         resetTokenRepository.delete(resetToken);
     }
+
+    public void CreatePasswordSetupToken(String email) {
+        String token = UUID.randomUUID().toString();
+        resetTokenRepository.save(ResetToken.builder().token(token).email(email).build());
+        // Sending an email with a link to set up the password
+        String setPasswordUrl = "http://localhost:3000/setup-password?token=" + token;
+        String subject = "Setup Your Password";
+        String body = "To set up your password, click on the link below:\n" + setPasswordUrl;
+        sendEmail(email, subject, body);
+    }
+
 }

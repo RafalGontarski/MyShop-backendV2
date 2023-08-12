@@ -32,4 +32,9 @@ public class EmailController {
     public void ResetEmail(@RequestBody ResetTokenRequest request) {
         emailService.ResetEmail(request);
     }
+    @PostMapping("/setupPassword")
+    public void SetupPassword(@RequestBody ResetTokenRequest request) {
+        emailService.CreatePasswordSetupToken(request.getEmail());
+    }
+
 }
