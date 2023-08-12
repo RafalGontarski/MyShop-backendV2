@@ -39,7 +39,7 @@ public class AuthenticationService {
                 .city(request.getCity())
                 .country(request.getCountry())
                 .email(request.getEmail())
-//                .password(passwordEncoder.encode(request.getPassword()))
+                .password(passwordEncoder.encode(request.getPassword()))
                 .roles(Collections.singleton(Role.USER))
                 .build();
         repository.save(user);

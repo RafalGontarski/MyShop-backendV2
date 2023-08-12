@@ -22,11 +22,7 @@ public class RegisterRequest {
     private String country;
     @Column(nullable = false, unique = true)
     private String email;
+    private String password;
+    private String repeatPassword;
 
-
-    public RegisterRequest(String ownerName, String ownerLastname, String email) {
-        this.firstName = ownerName;
-        this.lastName = ownerLastname;
-        this.email = email;
-    }
 }

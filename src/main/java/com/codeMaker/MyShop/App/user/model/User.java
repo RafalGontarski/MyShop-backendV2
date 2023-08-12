@@ -35,6 +35,7 @@ public class User implements UserDetails {
     private String country;
     @Column(nullable = false, unique = true)
     private String email;
+    private String password;
     private Set<Role> roles ;
 
     @Override
@@ -44,12 +45,12 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return email;
+        return firstName;
     }
 
     @Override
