@@ -14,8 +14,8 @@ public class UserController {
         this.userService = userService;
     }
 
-//    @GetMapping("/getUser")
-//    public void getCurrentUser(String email) {
-//        return userService.getUser(email);
-//    }
+    @GetMapping("/getUser")
+    public void getCurrentUser(String email) {
+        return userService.getUser(email);
+    }
 }
