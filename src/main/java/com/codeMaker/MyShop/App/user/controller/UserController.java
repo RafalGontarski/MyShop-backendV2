@@ -1,7 +1,9 @@
 package com.codeMaker.MyShop.App.user.controller;
 
 import com.codeMaker.MyShop.App.auth.model.AuthUserResponse;
+import com.codeMaker.MyShop.App.user.model.AddressUpdateRequest;
 import com.codeMaker.MyShop.App.user.model.EmailUpdateRequest;
+import com.codeMaker.MyShop.App.user.model.FirstNameUpdateRequest;
 import com.codeMaker.MyShop.App.user.model.User;
 import com.codeMaker.MyShop.App.user.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -35,4 +37,17 @@ public class UserController {
         userService.updateEmail(userId, emailRequest.getEmail());
         return ResponseEntity.ok().build();
     }
+
+    @PatchMapping("/{userId}/address")
+    public ResponseEntity<?> updateAddress(@PathVariable Long userId, @RequestBody AddressUpdateRequest addressRequest) {
+        userService.updateAddress(userId, addressRequest);
+        return ResponseEntity.ok().build();
+    }
+
+    @PatchMapping("/{userId}/firstName")
+    public ResponseEntity<?> updateFirstName(@PathVariable Long userId, @RequestBody FirstNameUpdateRequest firstNameRequest) {
+        userService.updateFirstName(userId, firstNameRequest.getFirstName());
+        return ResponseEntity.ok().build();
+    }
+
 }

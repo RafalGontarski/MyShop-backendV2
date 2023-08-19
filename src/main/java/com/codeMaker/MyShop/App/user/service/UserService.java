@@ -1,5 +1,6 @@
 package com.codeMaker.MyShop.App.user.service;
 
+import com.codeMaker.MyShop.App.user.model.AddressUpdateRequest;
 import com.codeMaker.MyShop.App.user.model.User;
 import com.codeMaker.MyShop.App.user.model.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -24,11 +25,17 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public void updateAddress(Long userId, String newAddress) {
+    public void updateAddress(Long userId, AddressUpdateRequest addressRequest) {
         User user = userRepository.findById(userId).orElseThrow(() -> new EntityNotFoundException("User not found"));
-        user.setAddress(newAddress); // Zakładając, że klasa User ma metodę setAddress
+        user.setFirstName(addressRequest.getFirstName());
+        user.setLastName(addressRequest.getLastName());
+        user.setAddress(addressRequest.getAddress());
+        user.setPostalCode(addressRequest.getPostalCode());
+        user.setCity(addressRequest.getCity());
+        user.setCountry(addressRequest.getCountry());
         userRepository.save(user);
     }
+
 
     public void updateFirstName(Long userId, String newFirstName) {
         User user = userRepository.findById(userId).orElseThrow(() -> new EntityNotFoundException("User not found"));
