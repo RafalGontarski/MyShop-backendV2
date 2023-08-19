@@ -1,4 +1,4 @@
-package com.codeMaker.MyShop.App.user.model;
+package com.codeMaker.MyShop.App.user.model.edit;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

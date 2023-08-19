@@ -1,10 +1,11 @@
 package com.codeMaker.MyShop.App.user.service;
 
-import com.codeMaker.MyShop.App.user.model.AddressUpdateRequest;
+import com.codeMaker.MyShop.App.user.model.edit.AddressUpdateRequest;
 import com.codeMaker.MyShop.App.user.model.User;
 import com.codeMaker.MyShop.App.user.model.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -40,6 +41,16 @@ public class UserService {
     public void updateFirstName(Long userId, String newFirstName) {
         User user = userRepository.findById(userId).orElseThrow(() -> new EntityNotFoundException("User not found"));
         user.setFirstName(newFirstName);
+        userRepository.save(user);
+    }
+
+    public void updatePassword(Long userId, String newPassword) {
+        User user = userRepository.findById(userId).orElseThrow(() -> new EntityNotFoundException("User not found"));
+
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode(newPassword);
+
+        user.setPassword(encodedPassword);
         userRepository.save(user);
     }
 }
