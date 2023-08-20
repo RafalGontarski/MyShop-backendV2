@@ -17,6 +17,10 @@ public class AuthenticationResponses {
     private Long id;
     private String firstName;
     private String lastName;
+    private String address;
+    private String postalCode;
+    private String city;
+    private String country;
     private String email;
     private String password;
     private Set<Role> roles;
