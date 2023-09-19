@@ -45,6 +45,16 @@ public class CategoryService {
                 .collect(Collectors.toList());
     }
 
+    public Long getSubCategoryIdByName(String name) {
+        SubCategory subCategory = subCategoryRepository.findByName(name);
+        if (subCategory != null) {
+            return subCategory.getId();
+        } else {
+            throw new EntityNotFoundException("SubCategory not found with name: " + name);
+        }
+    }
+
+
 
 
 

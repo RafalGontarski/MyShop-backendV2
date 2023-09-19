@@ -9,6 +9,7 @@ import java.util.List;
 public interface SubCategoryRepository extends JpaRepository<SubCategory, Long> {
     List<SubCategory> findByCategoryCategoryId(Long categoryId);
 
+    SubCategory findByName(String name);
 
     // Tutaj możesz dodawać dodatkowe metody, jeśli są potrzebne.
 }

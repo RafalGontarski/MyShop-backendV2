@@ -13,5 +13,5 @@ import java.util.List;
 @AllArgsConstructor
 public class CategoryRequest {
     private String name;
-//    private String iconUrl;
+    private String iconUrl;
 }

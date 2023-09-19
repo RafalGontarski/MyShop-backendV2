@@ -55,6 +55,17 @@ public class CategoryController {
         }
     }
 
+    @GetMapping("/subcategories/id")
+    public ResponseEntity<Long> getSubCategoryIdByName(@RequestParam String name) {
+        try {
+            Long subCategoryId = categoryService.getSubCategoryIdByName(name);
+            return new ResponseEntity<>(subCategoryId, HttpStatus.OK);
+        } catch (EntityNotFoundException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+
 
     // Tutaj możesz dodać dodatkowe endpointy, jeśli są potrzebne.
 }

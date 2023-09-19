@@ -27,6 +27,11 @@ public class SecurityConfiguration {
                 .disable()
                 .authorizeHttpRequests()
                     .requestMatchers(
+                            "/images/**",
+                            "/static/css/**",
+                            "/static/js/**")
+                    .permitAll()
+                    .requestMatchers(
                             "/**",
                             "/api/auth/**",
                             "/api/users/**")
