@@ -16,6 +16,8 @@ public class SubCategory {
 
     private String name;
 
+    private String iconUrl;
+
     // Jeśli subkategoria jest powiązana z kategorią główną
     @ToString.Exclude
     @ManyToOne

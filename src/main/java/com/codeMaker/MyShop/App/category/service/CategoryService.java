@@ -1,9 +1,6 @@
 package com.codeMaker.MyShop.App.category.service;
 
-import com.codeMaker.MyShop.App.category.model.Category;
-import com.codeMaker.MyShop.App.category.model.CategoryRepository;
-import com.codeMaker.MyShop.App.category.model.SubCategory;
-import com.codeMaker.MyShop.App.category.model.SubCategoryRepository;
+import com.codeMaker.MyShop.App.category.model.*;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,11 +14,17 @@ public class CategoryService {
 
     private final CategoryRepository categoryRepository;
     private final SubCategoryRepository subCategoryRepository;
+    private final SecondSubCategoryRepository secondSubCategoryRepository;
+
 
     @Autowired
-    public CategoryService(CategoryRepository categoryRepository, SubCategoryRepository subCategoryRepository) {
+    public CategoryService(
+            CategoryRepository categoryRepository,
+            SubCategoryRepository subCategoryRepository,
+            SecondSubCategoryRepository secondSubCategoryRepository) {
         this.categoryRepository = categoryRepository;
         this.subCategoryRepository = subCategoryRepository;
+        this.secondSubCategoryRepository = secondSubCategoryRepository;
     }
 
     @Transactional
@@ -32,6 +35,22 @@ public class CategoryService {
 
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
+    }
+
+    public List<SubCategory> getAllSubCategoriesByCategoryId(Long categoryId) {
+        if (!categoryRepository.existsById(categoryId)) {
+            throw new EntityNotFoundException("Category with id " + categoryId + " not found");
+        }
+
+        return subCategoryRepository.findByCategoryCategoryId(categoryId);
+    }
+
+    public List<SecondSubCategory> getAllSecondSubCategoriesByCategoryId(Long subCategoryId) {
+        if (!subCategoryRepository.existsById(subCategoryId)) {
+            throw new EntityNotFoundException("Category with id " + subCategoryId + " not found");
+        }
+
+        return secondSubCategoryRepository.findSecondSubCategoryBySubCategoryId(subCategoryId);
     }
 
     public List<String> getSubCategoryNamesByCategoryId(Long categoryId) {

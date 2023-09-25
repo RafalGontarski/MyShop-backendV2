@@ -3,6 +3,8 @@ package com.codeMaker.MyShop.App.category.controller;
 
 import com.codeMaker.MyShop.App.category.model.Category;
 import com.codeMaker.MyShop.App.category.model.CategoryRequest;
+import com.codeMaker.MyShop.App.category.model.SecondSubCategory;
+import com.codeMaker.MyShop.App.category.model.SubCategory;
 import com.codeMaker.MyShop.App.category.service.CategoryService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,7 @@ import java.util.List;
 public class CategoryController {
 
     private final CategoryService categoryService;
+
     private static final Logger log = LoggerFactory.getLogger(CategoryController.class);
 
     @Autowired
@@ -42,6 +45,23 @@ public class CategoryController {
         List<Category> categories = categoryService.getAllCategories();
         log.info("Fetched categories: {}", categories);
         return new ResponseEntity<>(categories, HttpStatus.OK);
+    }
+
+    @GetMapping("/{categoryId}/subCategories")
+    public ResponseEntity<List<SubCategory>> getAllSubCategories(@PathVariable Long categoryId) {
+        List<SubCategory> subCategories = categoryService.getAllSubCategoriesByCategoryId(categoryId);
+        log.info("Fetched subCategories: {}", subCategories);
+        return new ResponseEntity<>(subCategories, HttpStatus.OK);
+    }
+
+    @GetMapping("/{categoryId}/subCategories/{subCategoryId}/secondSubCategories")
+    public ResponseEntity<List<SecondSubCategory>> getAllSecondSubCategories(
+            @PathVariable Long categoryId,
+            @PathVariable Long subCategoryId
+            ) {
+        List<SecondSubCategory> secondSubCategories = categoryService.getAllSecondSubCategoriesByCategoryId(subCategoryId);
+        log.info("Fetched subCategories: {}", secondSubCategories);
+        return new ResponseEntity<>(secondSubCategories, HttpStatus.OK);
     }
 
 

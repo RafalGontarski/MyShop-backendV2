@@ -25,7 +25,7 @@ public class Category {
 //    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
 //    private List<SubCategory> subCategories;
 
-//    private String imageUrl;
+    private String imageUrl;
     private String iconUrl;
 //    private String slug;
 //    private Integer displayOrder;
