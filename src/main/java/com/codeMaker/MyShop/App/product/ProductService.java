@@ -8,8 +8,12 @@ import java.util.List;
 @Service
 public class ProductService {
 
-    @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     public List<Product> getAllProducts() {
         return productRepository.findAll();
@@ -27,8 +31,8 @@ public class ProductService {
         productRepository.deleteById(id);
     }
 
-    public List<Product> getProductsBySubCategoryId(Long subCategoryId) {
-        return productRepository.findBySubCategoryId(subCategoryId);
+    public List<Product> getProductsBySecondSubCategoryId(Long secondSubCategoryId) {
+        return productRepository.findBySecondSubCategoryId(secondSubCategoryId);
     }
 }
 

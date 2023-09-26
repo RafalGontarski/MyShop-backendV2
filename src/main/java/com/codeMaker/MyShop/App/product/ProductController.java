@@ -52,9 +52,9 @@ public class ProductController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/sub-category/{subCategoryId}")
-    public ResponseEntity<List<Product>> getProductsBySubCategoryId(@PathVariable Long subCategoryId) {
-        return ResponseEntity.ok(productService.getProductsBySubCategoryId(subCategoryId));
+    @GetMapping("/secondSubCategory/{secondSubCategoryId}")
+    public ResponseEntity<List<Product>> getProductsBySecondSubCategoryId(@PathVariable Long secondSubCategoryId) {
+        return ResponseEntity.ok(productService.getProductsBySecondSubCategoryId(secondSubCategoryId));
     }
 }
 

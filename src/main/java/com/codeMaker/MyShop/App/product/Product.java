@@ -1,5 +1,6 @@
 package com.codeMaker.MyShop.App.product;
 
+import com.codeMaker.MyShop.App.category.model.SecondSubCategory;
 import com.codeMaker.MyShop.App.category.model.SubCategory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -32,8 +33,8 @@ public class Product {
     private String imageUrl;
 
     @ManyToOne
-    @JoinColumn(name = "sub_category_id", nullable = false)
-    private SubCategory subCategory;
+    @JoinColumn(name = "second_sub_category_id", nullable = false)
+    private SecondSubCategory secondSubCategory;
 
     // Gettery, settery, konstruktory, equals, hashCode, toString...
 }
