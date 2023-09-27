@@ -33,9 +33,23 @@ public class Product {
     private String imageUrl;
 
     @ManyToOne
-    @JoinColumn(name = "second_sub_category_id", nullable = false)
+    @JoinColumn(name = "sub_category_id")
+    private SubCategory subCategory;
+
+    @ManyToOne
+    @JoinColumn(name = "second_sub_category_id")
     private SecondSubCategory secondSubCategory;
 
     // Gettery, settery, konstruktory, equals, hashCode, toString...
+    @PrePersist
+    @PreUpdate
+    public void validate() {
+        if (subCategory == null && secondSubCategory == null) {
+            throw new IllegalArgumentException("Produkt musi być przypisany albo do SubCategory albo do SecondSubCategory!");
+        }
+        if (subCategory != null && secondSubCategory != null) {
+            throw new IllegalArgumentException("Produkt może być przypisany albo do SubCategory albo do SecondSubCategory, ale nie do obu jednocześnie!");
+        }
+    }
 }
 

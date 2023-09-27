@@ -34,22 +34,30 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
-        return ResponseEntity.ok(productService.saveProduct(product));
+        productService.saveProduct(product);
+        return ResponseEntity.ok(product);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product product) {
         if (productService.getProductById(id) != null) {
-            return ResponseEntity.ok(productService.saveProduct(product));
+            productService.saveProduct(product);
+            return ResponseEntity.ok(product);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/subCategory/{subCategoryId}")
+    public ResponseEntity<List<Product>> getProductsBySubCategoryId(@PathVariable Long subCategoryId) {
+        return ResponseEntity.ok(productService.getProductsBySubCategoryId(subCategoryId));
     }
 
     @GetMapping("/secondSubCategory/{secondSubCategoryId}")
