@@ -26,11 +26,11 @@ Welcome to my "Gone Fishing" project! This online fishing shop was inspired by t
 
 #### 2. Categories and Products:
 - Users can browse products based on categories.
-- Managers can add new categories and edit existing products.
+- Managers can add new categories.
 
 #### 3. Data Editing:
 - Customers can edit their personal information and password.
-- Managers have permissions to edit graphics and product images.
+- Managers have permissions to add graphics in carousel.
 
 #### 4. Features Under Development:
 - **Favorites:** Customers will be able to add products to their favorites for easier future reference.
