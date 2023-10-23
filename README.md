@@ -37,9 +37,7 @@ Welcome to the "Gone Fishing" project! This is a fishing shop inspired by the po
 
 ### Acknowledgments
 
-A heartfelt thank you to everyone who contributed to the creation of the "Gone Fishing" project. Being inspired by Thomann's store was key in shaping our website.
-
----
+A heartfelt thank you to everyone who contributed to the creation of the "Będzie Łowione" project. Being inspired by Thomann's store was key in shaping our website.
 
 Thank you for visiting and using our shop! We wish you successful fishing adventures and hope that "Gone Fishing" will become your favorite online destination for fishing gear!
 
