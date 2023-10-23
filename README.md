@@ -4,6 +4,10 @@
 
 Welcome to the "Gone Fishing" project! This is a fishing shop inspired by the popular online store, Thomann. Our store offers a wide range of fishing products, categorized for ease of browsing, and includes varied functionalities for different user roles.
 
+### App stack
+
+![image](https://github.com/RafalGontarski/DentFlow-frontend/assets/106514250/6275239b-c711-4004-8deb-c4442440ef99) ![image](https://github.com/RafalGontarski/DentFlow-frontend/assets/106514250/2b443685-586f-4354-8a27-11e3cad68efc) ![image](https://github.com/RafalGontarski/DentFlow-frontend/assets/106514250/e86470fc-f9d7-4e7d-a0fc-88e60353ddf0) ![image](https://github.com/RafalGontarski/DentFlow-frontend/assets/106514250/14a34e6e-fee8-44bb-af68-f574782b1e23) ![image](https://github.com/RafalGontarski/DentFlow-frontend/assets/106514250/250522fa-d6b3-4490-b8bf-18ce2eb7457b)
+
 ### Features
 
 #### 1. User Roles:
