@@ -2,6 +2,7 @@
 
 ### Introduction
 Dear Recruiters, 
+
 Welcome to the "Będzie Łowione" project! This is a fishing shop inspired by the popular online store, Thomann. Our store offers a wide range of fishing products, categorized for ease of browsing, and includes varied functionalities for different user roles.
 
 ### App stack
