@@ -6,7 +6,9 @@ Welcome to the "Gone Fishing" project! This is a fishing shop inspired by the po
 
 ### App stack
 
-![image](https://github.com/RafalGontarski/DentFlow-frontend/assets/106514250/6275239b-c711-4004-8deb-c4442440ef99) ![image](https://github.com/RafalGontarski/DentFlow-frontend/assets/106514250/2b443685-586f-4354-8a27-11e3cad68efc) ![Hibernate (1)](https://github.com/RafalGontarski/MyShop-backendV2/assets/106514250/6a62543c-45f5-41cb-956a-c6a65bac3167)
+![Java (3)](https://github.com/RafalGontarski/MyShop-backendV2/assets/106514250/b8e83eb5-3e28-4f6d-b9ff-4d93f3510aa4)
+![image](https://github.com/RafalGontarski/DentFlow-frontend/assets/106514250/2b443685-586f-4354-8a27-11e3cad68efc) 
+![Hibernate (1)](https://github.com/RafalGontarski/MyShop-backendV2/assets/106514250/6a62543c-45f5-41cb-956a-c6a65bac3167)
 
 
 ### Features
