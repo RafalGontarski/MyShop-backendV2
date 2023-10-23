@@ -1,58 +1,35 @@
-# Fishing Store Backend
+## "Będzie Łowione" - Fishing Shop
 
-## Overview
+### Introduction
 
-This is the backend component of our fishing store application. Designed with robustness in mind, it handles a variety of tasks, including product management, user roles, and more.
+Welcome to the "Gone Fishing" project! This is a fishing shop inspired by the popular online store, Thomann. Our store offers a wide range of fishing products, categorized for ease of browsing, and includes varied functionalities for different user roles.
 
-## Technical Details
+### Features
 
-- **Programming Language**: Java
-- **Framework**: Spring with Hibernate
-- **Database**: PostgreSQL
-- **API Type**: RestAPI
-- **Design Patterns**: MVC and Builder
-- **Authentication & Authorization**: Implemented with JWT
-- **User Roles**: Admin, Owner, Manager, Client
+#### 1. User Roles:
+- **Customer:** Can browse products, edit their personal details, and add products to favorites (feature under development).
+- **Manager:** Has access to edit products, add categories, and manage orders.
+- **Owner:** Has full permissions to oversee the shop's management, including adding managers and modifying the shop's structure.
 
-## Features
+#### 2. Categories and Products:
+- Users can browse products based on categories.
+- Managers can add new categories and edit existing products.
 
-1. **User Model**: Handles user data and associated operations.
-2. **Category Model**: Manages different product categories within the store.
-3. **Product Model**: Manages individual products, their details, and related operations.
+#### 3. Data Editing:
+- Customers can edit their personal information and password.
+- Managers have permissions to edit graphics and product images.
 
-## Setup & Installation
+#### 4. Features Under Development:
+- **Favorites:** Customers will be able to add products to their favorites for easier future reference.
+- **Cart and Payments:** A cart and payment handling feature is planned, enabling customers to make purchases directly through the store.
 
-1. **Database Setup**: Ensure PostgreSQL is installed and set up on your machine.
-2. **Dependencies**: Install the necessary Java dependencies and ensure Spring Boot is set up.
-3. **Configuration**: Update the `application.properties` file with your database connection details.
-4. **Running the application**: Navigate to the root directory and execute:
-   ```
-   ./mvnw spring-boot:run
-   ```
-5. The server will start, and the API will be accessible at `http://localhost:8080/`.
+### Acknowledgments
 
-## API Endpoints
+A heartfelt thank you to everyone who contributed to the creation of the "Gone Fishing" project. Being inspired by Thomann's store was key in shaping our website.
 
-(You can expand on this section with detailed API routes, request, and response examples)
+---
 
-## Authentication & Authorization
-
-- **JWT**: Used for securing the API and ensuring only authenticated users can access specific endpoints.
-- **User Roles**:
-  - **Admin**: Full access to all operations.
-  - **Owner**: Can manage product listings and view sales data.
-  - **Manager**: Can manage product listings.
-  - **Client**: Can view products and make purchases.
-
-## Future Improvements
-
-- Expand the models to include purchase histories, reviews, etc.
-- Implement a caching mechanism for faster data retrieval.
-- Integration with a frontend application for a complete e-commerce experience.
-
-## Contributions
-
-Feel free to fork this repository, make changes, and submit pull requests. For major changes, please open an issue first to discuss what you'd like to change.
+Thank you for visiting and using our shop! We wish you successful fishing adventures and hope that "Gone Fishing" will become your favorite online destination for fishing gear!
 
 ## License
 
