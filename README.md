@@ -1,8 +1,8 @@
 ## "Będzie Łowione" - Fishing Shop
 
 ### Introduction
-
-Welcome to the "Gone Fishing" project! This is a fishing shop inspired by the popular online store, Thomann. Our store offers a wide range of fishing products, categorized for ease of browsing, and includes varied functionalities for different user roles.
+Dear Recruiters, 
+Welcome to the "Będzie Łowione" project! This is a fishing shop inspired by the popular online store, Thomann. Our store offers a wide range of fishing products, categorized for ease of browsing, and includes varied functionalities for different user roles.
 
 ### App stack
 
@@ -35,10 +35,12 @@ Welcome to the "Gone Fishing" project! This is a fishing shop inspired by the po
 - **Favorites:** Customers will be able to add products to their favorites for easier future reference.
 - **Cart and Payments:** A cart and payment handling feature is planned, enabling customers to make purchases directly through the store.
 
+### A Note to Recruiters
+Your time and consideration in reviewing my project are greatly appreciated. I've endeavored to showcase both my technical expertise and my dedication to crafting user-centered digital experiences. I am eager to discuss any aspect of the project in detail during our discussions.
+
 ### Acknowledgments
 
 A heartfelt thank you to everyone who contributed to the creation of the "Będzie Łowione" project. Being inspired by Thomann's store was key in shaping our website.
-
 Thank you for visiting and using our shop! We wish you successful fishing adventures and hope that "Gone Fishing" will become your favorite online destination for fishing gear!
 
 ## License
