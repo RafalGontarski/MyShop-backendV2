@@ -13,6 +13,9 @@ Welcome to my "Gone Fishing" project! This online fishing shop was inspired by t
 ![Hibernate (1)](https://github.com/RafalGontarski/MyShop-backendV2/assets/106514250/6a62543c-45f5-41cb-956a-c6a65bac3167)
 ![Postgres](https://github.com/RafalGontarski/MyShop-backendV2/assets/106514250/13d843a0-59d1-4f68-a8a2-c40c746d5ba2)
 ![JUnit5 (1)](https://github.com/RafalGontarski/MyShop-backendV2/assets/106514250/1b3cfab2-3d1a-49e2-9594-2381e72e3519)
+![Mavem (1)](https://github.com/RafalGontarski/MyShop-backendV2/assets/106514250/ddaa0a9e-b0e8-45b6-a866-268837843920)
+![YAML (1)](https://github.com/RafalGontarski/MyShop-backendV2/assets/106514250/309fb38d-5a3d-4972-9199-a5945d6cf5f7)
+
 
 ### Video
 
